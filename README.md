@@ -14,21 +14,48 @@ This repository holds the code, analysis scripts, and replication material that 
 
 ```
 .
-├── Data/        # Raw and intermediate datasets (most contents git-ignored; see .gitignore)
+├── Data/                        # Raw and intermediate datasets (most contents git-ignored)
+├── notebooks/                   # Per-chapter analysis notebooks (.ipynb)
+├── scripts/                     # One-shot data ingest / cleaning scripts
+├── figures/                     # Rendered figure outputs (PNG/PDF/SVG)
+├── src/quiet_erosions/          # Importable Python package: shared utilities
+├── tests/                       # Pytest suite for shared utilities
+├── pyproject.toml               # Project metadata + dependency groups
+├── CITATION.cff                 # Machine-readable citation metadata
 ├── README.md
 ├── LICENSE
 └── .gitignore
 ```
 
-Additional folders (`scripts/`, `figures/`, `notebooks/`, etc.) will be added as analysis chapters land.
-
 ## Data
 
 Most primary datasets used in the book are third-party and are not redistributed here. Where redistribution is permitted, files will live under `Data/`. Where it is not, the relevant scripts will document how to obtain the source data directly from its publisher.
 
+## Setup
+
+Requires Python 3.11 or newer.
+
+```bash
+# Clone
+git clone https://github.com/DrDMo/quiet-erosions-book.git
+cd quiet-erosions-book
+
+# Create a virtual environment and install in editable mode with all extras
+python -m venv .venv
+# Windows:  .venv\Scripts\activate
+# macOS/Linux:  source .venv/bin/activate
+pip install -e ".[analysis,notebook,dev]"
+```
+
+Then verify:
+
+```bash
+pytest -q
+```
+
 ## Reproducing the analyses
 
-Setup and reproduction instructions will be added alongside the first analysis script. Until then, the repository is a scaffold.
+Each chapter's analyses live in `notebooks/` (and any one-shot data preparation in `scripts/`). Reproduction instructions specific to a chapter will be documented alongside its notebook as those land.
 
 ## License
 

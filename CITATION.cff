@@ -1,0 +1,16 @@
+cff-version: 1.2.0
+message: "If you use the code in this repository, please cite the book."
+title: "Quiet Erosions: Authoritarian Demand and the Institutional Pathways of Democratic Backsliding — Code Archive"
+authors:
+  - family-names: Molnar
+    given-names: Darin
+type: software
+repository-code: "https://github.com/DrDMo/quiet-erosions-book"
+license: MIT
+references:
+  - type: book
+    title: "Quiet Erosions: Authoritarian Demand and the Institutional Pathways of Democratic Backsliding"
+    authors:
+      - family-names: Molnar
+        given-names: Darin
+    notes: "Forthcoming. Update with publisher, year, and ISBN on publication."
