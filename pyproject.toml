@@ -56,7 +56,8 @@ packages = ["src/quiet_erosions"]
 [tool.ruff]
 line-length = 100
 target-version = "py311"
-extend-exclude = ["notebooks/**/*.ipynb_checkpoints"]
+# Notebooks have their own conventions in research repos; exclude wholesale.
+extend-exclude = ["notebooks", ".venv", "build", "dist"]
 
 [tool.ruff.lint]
 select = [
