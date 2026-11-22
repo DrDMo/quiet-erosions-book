@@ -289,7 +289,7 @@ def fig_ledger(rob: pd.DataFrame, post: pd.DataFrame) -> None:
     ax.set_yticks(y, specs + ["Measurement uncertainty (200 draws)"], fontsize=7)
     ax.invert_yaxis()
     ax.set_xlabel("AGP coefficient on four-year change, within country (95% CI)")
-    ax.legend(fontsize=7, loc="lower left")
+    ax.legend(fontsize=7, loc="upper right")
     ax.grid(axis="y", visible=False)
     S.save(fig, FIGURES_DIR / "ch11_fig1_ledger")
 
