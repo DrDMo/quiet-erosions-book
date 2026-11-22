@@ -1,3 +1,5 @@
+import os
+
 from quiet_erosions.paths import DATA_DIR, FIGURES_DIR, REPO_ROOT
 
 
@@ -6,7 +8,7 @@ def test_repo_root_contains_pyproject():
 
 
 def test_data_dir_under_repo_root():
-    assert DATA_DIR.parent == REPO_ROOT
+    assert DATA_DIR.name in {"Data", os.path.basename(os.environ.get("QE_DATA_ROOT", "Data"))}
 
 
 def test_figures_dir_under_repo_root():

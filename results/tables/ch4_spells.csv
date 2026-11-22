@@ -1,0 +1,66 @@
+country_text_id,pathway,onset,a0,depth,recovery_year,duration,censored,provisional,country_name,region
+ROU,diagonal,1997,1.182,0.22799999999999998,2005.0,8,False,False,Romania,Eastern Europe & Central Asia
+ARG,diagonal,1999,1.728,0.4949999999999999,,24,True,False,Argentina,Latin America & Caribbean
+ALB,diagonal,2009,1.126,0.2699999999999999,,14,True,False,Albania,Eastern Europe & Central Asia
+BGR,diagonal,2009,1.208,0.31499999999999995,,14,True,False,Bulgaria,Eastern Europe & Central Asia
+ESP,diagonal,2009,1.783,0.4089999999999998,,14,True,False,Spain,Western Europe & North America
+JPN,diagonal,2009,1.432,0.21199999999999997,2018.0,9,False,False,Japan,Asia & Pacific
+LBR,diagonal,2009,1.532,0.31499999999999995,,14,True,False,Liberia,Sub-Saharan Africa
+PRY,diagonal,2009,1.068,0.3500000000000001,,14,True,False,Paraguay,Latin America & Caribbean
+ZAF,diagonal,2009,1.551,0.45699999999999985,,14,True,False,South Africa,Sub-Saharan Africa
+AUS,diagonal,2010,1.815,0.5369999999999999,,13,True,False,Australia,Western Europe & North America
+FIN,diagonal,2011,1.859,0.252,,12,True,False,Finland,Western Europe & North America
+GRC,diagonal,2011,1.822,0.663,,12,True,False,Greece,Western Europe & North America
+CRI,diagonal,2013,1.955,0.31300000000000017,,10,True,False,Costa Rica,Latin America & Caribbean
+LTU,diagonal,2013,1.408,0.20699999999999985,,10,True,False,Lithuania,Eastern Europe & Central Asia
+ROU,diagonal,2013,1.286,0.527,2021.0,8,False,False,Romania,Eastern Europe & Central Asia
+USA,diagonal,2013,1.988,0.506,,10,True,False,United States of America,Western Europe & North America
+CHL,diagonal,2014,1.698,0.44199999999999995,,9,True,False,Chile,Latin America & Caribbean
+COL,diagonal,2014,1.263,0.6189999999999999,,9,True,False,Colombia,Latin America & Caribbean
+BIH,diagonal,2016,1.125,0.32299999999999995,,7,True,False,Bosnia and Herzegovina,Eastern Europe & Central Asia
+CYP,diagonal,2016,1.467,0.32400000000000007,,7,True,False,Cyprus,Western Europe & North America
+FRA,diagonal,2016,1.748,0.20199999999999996,,7,True,False,France,Western Europe & North America
+LKA,diagonal,2016,0.927,0.5940000000000001,,7,True,False,Sri Lanka,Asia & Pacific
+NPL,diagonal,2016,1.167,0.25,,7,True,False,Nepal,Asia & Pacific
+PAN,diagonal,2016,1.18,0.21099999999999997,,7,True,False,Panama,Latin America & Caribbean
+URY,diagonal,2016,1.811,0.5429999999999999,,7,True,False,Uruguay,Latin America & Caribbean
+NGA,diagonal,2017,1.136,0.32999999999999985,,6,True,False,Nigeria,Sub-Saharan Africa
+ISL,diagonal,2018,1.673,0.17999999999999994,,5,True,True,Iceland,Western Europe & North America
+PRT,diagonal,2018,1.766,0.3919999999999999,,5,True,True,Portugal,Western Europe & North America
+AUT,diagonal,2019,1.627,0.24,,4,True,True,Austria,Western Europe & North America
+MNG,horizontal,1998,1.29,0.45500000000000007,,25,True,False,Mongolia,Eastern Europe & Central Asia
+ESP,horizontal,2009,1.413,0.32800000000000007,2016.0,7,False,False,Spain,Western Europe & North America
+PRY,horizontal,2009,0.946,0.593,,14,True,False,Paraguay,Latin America & Caribbean
+DOM,horizontal,2010,-0.483,0.281,2020.0,10,False,False,Dominican Republic,Latin America & Caribbean
+POL,horizontal,2011,1.42,0.833,,12,True,False,Poland,Eastern Europe & Central Asia
+ROU,horizontal,2013,0.763,0.5,2020.0,7,False,False,Romania,Eastern Europe & Central Asia
+USA,horizontal,2013,1.815,0.512,,10,True,False,United States of America,Western Europe & North America
+LBR,horizontal,2014,0.894,0.593,,9,True,False,Liberia,Sub-Saharan Africa
+CAN,horizontal,2015,1.506,0.357,,8,True,False,Canada,Western Europe & North America
+MEX,horizontal,2015,0.348,0.613,,8,True,False,Mexico,Latin America & Caribbean
+NGA,horizontal,2015,1.044,0.527,,8,True,False,Nigeria,Sub-Saharan Africa
+NPL,horizontal,2015,1.427,0.653,,8,True,False,Nepal,Asia & Pacific
+ARG,horizontal,2016,0.967,0.29499999999999993,,7,True,False,Argentina,Latin America & Caribbean
+LKA,horizontal,2016,0.452,0.428,,7,True,False,Sri Lanka,Asia & Pacific
+CPV,horizontal,2018,1.65,0.5169999999999999,,5,True,True,Cape Verde,Sub-Saharan Africa
+JPN,horizontal,2018,1.634,0.2739999999999998,,5,True,True,Japan,Asia & Pacific
+BTN,horizontal,2019,1.3,0.3460000000000001,,4,True,True,Bhutan,Asia & Pacific
+DNK,horizontal,2019,2.295,0.2570000000000001,,4,True,True,Denmark,Western Europe & North America
+ESP,horizontal,2019,1.47,0.3420000000000001,,4,True,True,Spain,Western Europe & North America
+PRT,horizontal,2019,1.536,0.32600000000000007,,4,True,True,Portugal,Western Europe & North America
+HND,vertical,2001,0.82,0.587,,22,True,False,Honduras,Latin America & Caribbean
+KEN,vertical,2003,0.619,0.237,2013.0,10,False,False,Kenya,Sub-Saharan Africa
+LSO,vertical,2003,1.09,0.21900000000000008,2022.0,19,False,False,Lesotho,Sub-Saharan Africa
+MEX,vertical,2003,1.28,0.2310000000000001,2018.0,15,False,False,Mexico,Latin America & Caribbean
+BEN,vertical,2007,0.973,0.15800000000000003,2015.0,8,False,False,Benin,Sub-Saharan Africa
+BGR,vertical,2007,1.232,0.17399999999999993,2014.0,7,False,False,Bulgaria,Eastern Europe & Central Asia
+CAN,vertical,2007,1.446,0.20399999999999996,2015.0,8,False,False,Canada,Western Europe & North America
+DEU,vertical,2009,1.804,0.22199999999999998,,14,True,False,Germany,Western Europe & North America
+USA,vertical,2012,1.552,0.3460000000000001,,11,True,False,United States of America,Western Europe & North America
+NAM,vertical,2015,1.064,0.31700000000000006,,8,True,False,Namibia,Sub-Saharan Africa
+BGR,vertical,2016,1.241,0.16400000000000015,,7,True,False,Bulgaria,Eastern Europe & Central Asia
+ISL,vertical,2016,1.471,0.2270000000000001,,7,True,False,Iceland,Western Europe & North America
+LTU,vertical,2016,1.389,0.15399999999999991,,7,True,False,Lithuania,Eastern Europe & Central Asia
+PRT,vertical,2018,1.62,0.20000000000000018,,5,True,True,Portugal,Western Europe & North America
+LKA,vertical,2019,1.208,0.21599999999999997,,4,True,True,Sri Lanka,Asia & Pacific
+SLE,vertical,2019,0.752,0.363,,4,True,True,Sierra Leone,Sub-Saharan Africa

@@ -1,0 +1,4 @@
+pathway,at_risk_windows,magnitude_met,failed_credibility,excluded_episode,failed_persistence,qualifying_windows,spells,spells_nonprovisional,countries,recovered,median_depth
+vertical,2026,124,0,79,8,37,16,13,15,6,0.221
+horizontal,2026,213,93,79,2,39,20,14,19,3,0.442
+diagonal,2026,204,32,87,7,78,29,26,28,3,0.324
