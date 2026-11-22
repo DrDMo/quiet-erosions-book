@@ -230,6 +230,7 @@ def main() -> None:
 
     fig_coefs(ch)
     fig_binned(d)
+    fig_components(comp)
 
 
 def fig_coefs(ch: pd.DataFrame) -> None:
@@ -256,6 +257,33 @@ def fig_coefs(ch: pd.DataFrame) -> None:
     axes[0].set_ylabel("Change in index per SD of AGP\n(latent units, 95% CI)")
     axes[0].legend(fontsize=7, loc="lower left")
     S.save(fig, FIGURES_DIR / "ch7_fig1_pathway_coefs")
+
+
+COMP_LABELS = {
+    "v2xel_frefair": "Clean elections",
+    "v2psparban": "Party bans (absence)",
+    "v2psbars": "Barriers to parties (absence)",
+    "v2x_jucon": "Judicial constraints",
+    "v2xlg_legcon": "Legislative constraints",
+    "v2juhcind": "High court independence",
+    "v2x_freexp_altinf": "Expression and alt. information",
+    "v2mecenefm": "Media censorship (absence)",
+    "v2xcs_ccsi": "Core civil society",
+}
+
+
+def fig_components(comp: pd.DataFrame) -> None:
+    t = comp.iloc[::-1].reset_index(drop=True)
+    fig, ax = plt.subplots(figsize=(5.5, 3.4))
+    y = np.arange(len(t))
+    for i, r in t.iterrows():
+        col = S.PATHWAY_COLORS[r.pathway]
+        ax.errorbar(r.coef, i, xerr=1.96 * r.se, fmt="o", ms=4, color=col, lw=1.2)
+    ax.axvline(0, color="black", lw=0.6)
+    ax.set_yticks(y, [COMP_LABELS[c] for c in t.component])
+    ax.set_xlabel("Four-year change (SD) per SD of AGP, within country (95% CI)")
+    ax.grid(axis="y", visible=False)
+    S.save(fig, FIGURES_DIR / "ch8_fig1_components")
 
 
 def fig_binned(d: pd.DataFrame, h: int = 4) -> None:
