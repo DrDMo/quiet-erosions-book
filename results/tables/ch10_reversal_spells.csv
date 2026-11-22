@@ -1,0 +1,35 @@
+country_text_id,pathway,onset,a0,depth,recovery_year,duration,censored,provisional,country_name,region,agp_trend,recovered,declining
+ALB,diagonal,2009,1.126,0.2699999999999999,,14,True,False,Albania,Eastern Europe & Central Asia,0.7326320507533847,0,0
+BGR,diagonal,2009,1.208,0.3149999999999999,,14,True,False,Bulgaria,Eastern Europe & Central Asia,0.7130659887254329,0,0
+ESP,diagonal,2009,1.783,0.4089999999999998,,14,True,False,Spain,Western Europe & North America,-0.300427340042419,0,1
+JPN,diagonal,2009,1.432,0.2119999999999999,2018.0,9,False,False,Japan,Asia & Pacific,-0.1482509936441445,1,1
+ZAF,diagonal,2009,1.551,0.4569999999999998,,14,True,False,South Africa,Sub-Saharan Africa,0.19545387394277086,0,0
+AUS,diagonal,2010,1.815,0.5369999999999999,,13,True,False,Australia,Western Europe & North America,-0.22250373890618824,0,1
+FIN,diagonal,2011,1.859,0.252,,12,True,False,Finland,Western Europe & North America,-0.3996175098012581,0,1
+GRC,diagonal,2011,1.822,0.663,,12,True,False,Greece,Western Europe & North America,-0.3068964736256876,0,1
+LTU,diagonal,2013,1.408,0.2069999999999998,,10,True,False,Lithuania,Eastern Europe & Central Asia,-0.07639390174735639,0,1
+ROU,diagonal,2013,1.286,0.527,2021.0,8,False,False,Romania,Eastern Europe & Central Asia,0.13319265739864816,1,0
+USA,diagonal,2013,1.988,0.506,,10,True,False,United States of America,Western Europe & North America,-0.1108812624160729,0,1
+CHL,diagonal,2014,1.698,0.4419999999999999,,9,True,False,Chile,Latin America & Caribbean,-0.6461497180432977,0,1
+COL,diagonal,2014,1.263,0.6189999999999999,,9,True,False,Colombia,Latin America & Caribbean,0.1945589721383515,0,0
+BIH,diagonal,2016,1.125,0.3229999999999999,,7,True,False,Bosnia and Herzegovina,Eastern Europe & Central Asia,0.787762128794351,0,0
+CYP,diagonal,2016,1.467,0.324,,7,True,False,Cyprus,Western Europe & North America,-2.8563255671164782,0,1
+FRA,diagonal,2016,1.748,0.2019999999999999,,7,True,False,France,Western Europe & North America,0.1565996149273297,0,0
+URY,diagonal,2016,1.811,0.5429999999999999,,7,True,False,Uruguay,Latin America & Caribbean,-0.4173548568519208,0,1
+NGA,diagonal,2017,1.136,0.3299999999999998,,6,True,False,Nigeria,Sub-Saharan Africa,-0.07362423357026518,0,1
+ESP,horizontal,2009,1.413,0.328,2016.0,7,False,False,Spain,Western Europe & North America,-0.300427340042419,1,1
+POL,horizontal,2011,1.42,0.833,,12,True,False,Poland,Eastern Europe & Central Asia,0.07420795180368239,0,0
+ROU,horizontal,2013,0.763,0.5,2020.0,7,False,False,Romania,Eastern Europe & Central Asia,0.13319265739864816,1,0
+USA,horizontal,2013,1.815,0.512,,10,True,False,United States of America,Western Europe & North America,-0.1108812624160729,0,1
+CAN,horizontal,2015,1.506,0.357,,8,True,False,Canada,Western Europe & North America,-0.3457456833363506,0,1
+MEX,horizontal,2015,0.348,0.613,,8,True,False,Mexico,Latin America & Caribbean,0.014638627965916973,0,0
+NGA,horizontal,2015,1.044,0.527,,8,True,False,Nigeria,Sub-Saharan Africa,-0.07362423357026518,0,1
+ARG,horizontal,2016,0.967,0.2949999999999999,,7,True,False,Argentina,Latin America & Caribbean,-0.18005982235070106,0,1
+MEX,vertical,2003,1.28,0.2310000000000001,2018.0,15,False,False,Mexico,Latin America & Caribbean,0.5337065294928107,1,0
+BGR,vertical,2007,1.232,0.1739999999999999,2014.0,7,False,False,Bulgaria,Eastern Europe & Central Asia,0.7130659887254329,1,0
+CAN,vertical,2007,1.446,0.2039999999999999,2015.0,8,False,False,Canada,Western Europe & North America,-0.3457456833363506,1,1
+DEU,vertical,2009,1.804,0.2219999999999999,,14,True,False,Germany,Western Europe & North America,-0.12275596669683897,0,1
+USA,vertical,2012,1.552,0.3460000000000001,,11,True,False,United States of America,Western Europe & North America,-0.08204846641002636,0,1
+BGR,vertical,2016,1.241,0.1640000000000001,,7,True,False,Bulgaria,Eastern Europe & Central Asia,0.7130659887254329,0,0
+ISL,vertical,2016,1.471,0.2270000000000001,,7,True,False,Iceland,Western Europe & North America,0.11648705497726031,0,0
+LTU,vertical,2016,1.389,0.1539999999999999,,7,True,False,Lithuania,Eastern Europe & Central Asia,-0.07639390174735639,0,1
