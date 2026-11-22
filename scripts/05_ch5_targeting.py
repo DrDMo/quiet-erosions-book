@@ -24,10 +24,15 @@ Outputs
 
 from __future__ import annotations
 
+import sys
+from pathlib import Path
+
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 import statsmodels.api as sm
+
+sys.path.insert(0, str(Path(__file__).parent))
 
 from quiet_erosions import plotstyle as S
 from quiet_erosions.paths import FIGURES_DIR, PROC_DIR, TABLES_DIR, ensure_dir
@@ -129,6 +134,23 @@ def qe1_test(df: pd.DataFrame, x: str, label: str, sub: pd.Series | None = None)
     )
 
 
+def _regime(df: pd.DataFrame) -> pd.DataFrame:
+    """Attach the wave-year Regimes of the World category from agp_link."""
+    link = pd.read_parquet(PROC_DIR / "agp_link.parquet")[
+        ["country_text_id", "wave_chron", "regime"]
+    ]
+    xw = pd.read_parquet(PROC_DIR / "country_iso3_xwalk.parquet")
+    from importlib import import_module
+
+    sup = import_module("04_link_agp").XWALK_SUPPLEMENT
+    extra = pd.DataFrame(list(sup.items()), columns=["country_num", "iso3"])
+    xw = pd.concat([xw[~xw.country_num.isin(extra.country_num)], extra], ignore_index=True)
+    link = link.merge(xw.rename(columns={"iso3": "country_text_id"}), on="country_text_id")
+    return df.merge(
+        link[["country_num", "wave_chron", "regime"]], on=["country_num", "wave_chron"], how="left"
+    )
+
+
 def country_gaps(df: pd.DataFrame) -> pd.DataFrame:
     d = df.dropna(subset=["constraint_idx", "ess_226", *CTRL]).copy()
     d["c_z"], d["e_z"] = _z(d.constraint_idx), _z(d.ess_226)
@@ -176,11 +198,32 @@ def main() -> None:
         qe1_test(df, "agp_z", "Primary: AGP factor score"),
         qe1_test(df, "agp2_z", "AGP without the democracy item"),
     ]
+    reg = _regime(df)
+    tests.append(qe1_test(reg, "agp_z", "Democracies only (RoW >= 2)", reg.regime >= 2))
+    tests.append(qe1_test(reg, "agp_z", "Liberal democracies only (RoW = 3)", reg.regime == 3))
+    tests.append(qe1_test(reg, "agp_z", "Autocracies only (RoW < 2)", reg.regime < 2))
     for w in (5, 6, 7):
         tests.append(qe1_test(df, "agp_z", f"Wave {w} only", df.wave_chron == w))
     tests = pd.DataFrame(tests)
     tests.to_csv(TABLES_DIR / "ch5_qe1_test.csv", index=False)
     print(tests.round(3).to_string())
+
+    # Item decomposition and the elections-versus-liberties contrast
+    extra = []
+    for item in ["agp_leader", "agp_army", "agp_nodem"]:
+        df[f"{item}_z"] = _z(df[item])
+        for y in ["constraint_idx", "executive_idx", "ess_226", "ess_229"]:
+            extra.append(dict(x=item, y=y, **fit(df, y, f"{item}_z")))
+    d = df.dropna(subset=["ess_226", "ess_229"]).copy()
+    d["el_minus_cr"] = _z(d.ess_226) - _z(d.ess_229)
+    extra.append(
+        dict(
+            x="agp_z", y="elections minus civil rights", **fit(d, "el_minus_cr", standardize=False)
+        )
+    )
+    extra = pd.DataFrame(extra)
+    extra.to_csv(TABLES_DIR / "ch5_decomposition.csv", index=False)
+    print(extra.round(3).to_string())
 
     gaps = country_gaps(df)
     gaps.to_csv(TABLES_DIR / "ch5_country_gaps.csv", index=False)
