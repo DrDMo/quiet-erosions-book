@@ -1,0 +1,14 @@
+country_text_id,vertical,horizontal,diagonal,first_onset,agp_wave_year,agp,agp_half,order
+LTU,2016.0,,2013.0,2013,2007.0,0.6707784516797292,upper,H/D first
+MEX,2003.0,2015.0,,2003,2001.0,1.551747223011136,upper,V first
+BGR,2007.0,,2009.0,2007,2007.0,1.1002430539449242,upper,V first
+CAN,2007.0,2015.0,,2007,2007.0,-1.1049841414664834,lower,V first
+USA,2012.0,2013.0,2013.0,2012,2007.0,-0.24212802329919123,upper,V first
+ROU,,2013.0,1997.0,1997,1997.0,0.008111746659186838,upper,no vertical
+ARG,,2016.0,1999.0,1999,1997.0,-0.5758995767772098,lower,no vertical
+ESP,,2009.0,2009.0,2009,2007.0,-0.7211390884323736,lower,no vertical
+LBR,,2014.0,2009.0,2009,,,no AGP,no vertical
+PRY,,2009.0,2009.0,2009,,,no AGP,no vertical
+NGA,,2015.0,2017.0,2015,2013.0,0.005550003008810991,upper,no vertical
+NPL,,2015.0,2016.0,2015,,,no AGP,no vertical
+LKA,,2016.0,2016.0,2016,,,no AGP,no vertical
