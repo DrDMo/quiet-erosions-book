@@ -75,6 +75,22 @@ def main() -> None:
     df["wave_year"] = df.wave_chron.map(WAVE_YEAR)
     df = df[df.wave_chron >= 3]  # AGP battery begins in wave 3
     out = df.drop(columns=AGP + CONF + ESS)
+
+    # Attach Volume 1's individual factor scores. agp_individual holds one row
+    # per valid-AGP respondent in the same within-cell order, so a stable sort
+    # on (country, wave) aligns the two files; the check below guards it.
+    fs = pd.read_parquet(PROC_DIR / "agp_individual.parquet")
+    fs = fs.sort_values(["country_num", "wave_chron"], kind="stable").reset_index(drop=True)
+    out = out.sort_values(["country_num", "wave_chron"], kind="stable").reset_index(drop=True)
+    valid = out.agp_mean.notna().to_numpy()
+    sub = out.loc[valid, ["country_num", "wave_chron", "agp_mean"]].reset_index(drop=True)
+    assert len(sub) == len(fs)
+    assert (sub.country_num.to_numpy() == fs.country_num.to_numpy()).all()
+    r = np.corrcoef(sub.agp_mean, fs.fs)[0, 1]
+    assert r > 0.95, f"factor scores misaligned (r = {r:.3f})"
+    out["agp_fs"] = np.nan
+    out.loc[valid, "agp_fs"] = fs.fs.to_numpy()
+    print(f"Volume 1 factor scores attached: r(agp_mean, agp_fs) = {r:.3f}")
     out.to_parquet(PROC_DIR / "qe_individual.parquet", index=False)
 
     cov = out.groupby("wave_chron").agg(
