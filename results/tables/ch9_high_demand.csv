@@ -1,0 +1,52 @@
+country_text_id,wave_year,agp_score,region_label,any_decline_delta,onset_4
+PHL,1997,1.9250793138974602,Asia & Pacific,False,False
+IDN,2001,1.8863627796544542,Asia & Pacific,False,False
+ZAF,2013,1.755480464476958,Sub-Saharan Africa,False,False
+MEX,2001,1.551747223011136,Latin America & Caribbean,False,True
+MEX,2013,1.5421369018363629,Latin America & Caribbean,False,True
+BRA,1997,1.5379136047073128,Latin America & Caribbean,False,False
+MEX,2007,1.527498273870446,Latin America & Caribbean,False,False
+PHL,2013,1.4882172640313935,Asia & Pacific,True,False
+IDN,2007,1.4716077343812024,Asia & Pacific,False,False
+BRA,2007,1.3682124576149624,Latin America & Caribbean,False,False
+TUR,2001,1.367646738143401,Middle East & North Africa,False,False
+CYP,2007,1.3176156214900947,Western Europe & North America,False,False
+BRA,2013,1.3002970256194588,Latin America & Caribbean,True,False
+UKR,2007,1.2815133984806635,Eastern Europe & Central Asia,True,False
+ROU,2001,1.2735322964841167,Eastern Europe & Central Asia,False,False
+GTM,2007,1.2679116669651984,Latin America & Caribbean,False,False
+ARM,2019,1.2534410834855634,Eastern Europe & Central Asia,True,False
+XKX,2007,1.226668357970427,Eastern Europe & Central Asia,False,False
+MEX,2019,1.211824674652184,Latin America & Caribbean,True,False
+MLI,2007,1.2036671171825333,Sub-Saharan Africa,False,False
+COL,1997,1.1961737736422888,Latin America & Caribbean,False,False
+BGR,2007,1.1002430539449242,Eastern Europe & Central Asia,True,True
+ROU,2013,1.0747918405352213,Eastern Europe & Central Asia,True,False
+IND,2007,1.0280735152324252,Asia & Pacific,False,False
+COL,2013,1.0206501779614365,Latin America & Caribbean,False,True
+MEX,1997,1.0180406935183253,Latin America & Caribbean,False,False
+IND,1997,1.0057078405719633,Asia & Pacific,False,False
+MKD,2019,0.9921431130422539,Eastern Europe & Central Asia,False,False
+LVA,2007,0.9746640803170699,Eastern Europe & Central Asia,False,False
+ROU,2007,0.9415991831365731,Eastern Europe & Central Asia,False,False
+IND,2001,0.8463379419830191,Asia & Pacific,False,False
+COL,2007,0.826091205823085,Latin America & Caribbean,False,False
+LTU,1997,0.7909354926634167,Eastern Europe & Central Asia,False,False
+MDA,1997,0.7599656182674394,Eastern Europe & Central Asia,True,False
+LTU,2001,0.7471723534270855,Eastern Europe & Central Asia,False,False
+CHL,2001,0.7363079634223195,Latin America & Caribbean,False,False
+ROU,2019,0.7335845620645985,Eastern Europe & Central Asia,True,False
+TWN,1997,0.7185259031559912,Asia & Pacific,False,False
+BGR,1997,0.7058687679539263,Eastern Europe & Central Asia,False,False
+TWN,2007,0.6860497307151703,Asia & Pacific,True,False
+CHL,1997,0.6858946139843294,Latin America & Caribbean,False,False
+LTU,2007,0.6707784516797292,Eastern Europe & Central Asia,False,False
+KOR,2007,0.6614515377991788,Asia & Pacific,True,False
+PRT,2007,0.6209582034870252,Western Europe & North America,False,False
+ECU,2019,0.6182936530109568,Latin America & Caribbean,False,False
+PER,2007,0.6085373185190052,Latin America & Caribbean,False,False
+LVA,2001,0.6026996787099765,Eastern Europe & Central Asia,False,False
+TWN,2013,0.5744418387054174,Asia & Pacific,False,False
+TUR,1997,0.573621343267317,Middle East & North Africa,False,False
+UKR,2019,0.5337254237645123,Eastern Europe & Central Asia,True,False
+POL,2007,0.5048552644240809,Eastern Europe & Central Asia,False,True

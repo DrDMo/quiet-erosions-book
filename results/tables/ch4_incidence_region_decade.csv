@@ -1,0 +1,25 @@
+region,decade,vertical_onsets,vertical_per100,horizontal_onsets,horizontal_per100,diagonal_onsets,diagonal_per100,at_risk_country_years
+Asia & Pacific,1990s,0,0.0,0,0.0,0,0.0,54
+Asia & Pacific,2000s,0,0.0,0,0.0,1,1.09,92
+Asia & Pacific,2010s,0,0.0,2,2.38,2,2.38,84
+Asia & Pacific,2020s,0,,0,,0,,0
+Eastern Europe & Central Asia,1990s,0,0.0,1,1.56,1,1.56,64
+Eastern Europe & Central Asia,2000s,1,0.64,0,0.0,2,1.27,157
+Eastern Europe & Central Asia,2010s,2,1.57,2,1.57,3,2.36,127
+Eastern Europe & Central Asia,2020s,0,,0,,0,,0
+Latin America & Caribbean,1990s,0,0.0,0,0.0,1,1.11,90
+Latin America & Caribbean,2000s,2,1.01,1,0.51,1,0.51,198
+Latin America & Caribbean,2010s,0,0.0,3,1.74,5,2.91,172
+Latin America & Caribbean,2020s,0,,0,,0,,0
+Middle East & North Africa,1990s,0,0.0,0,0.0,0,0.0,10
+Middle East & North Africa,2000s,0,0.0,0,0.0,0,0.0,18
+Middle East & North Africa,2010s,0,0.0,0,0.0,0,0.0,13
+Middle East & North Africa,2020s,0,,0,,0,,0
+Sub-Saharan Africa,1990s,0,0.0,0,0.0,0,0.0,57
+Sub-Saharan Africa,2000s,3,2.08,0,0.0,2,1.39,144
+Sub-Saharan Africa,2010s,1,0.68,2,1.35,1,0.68,148
+Sub-Saharan Africa,2020s,0,,0,,0,,0
+Western Europe & North America,1990s,0,0.0,0,0.0,0,0.0,120
+Western Europe & North America,2000s,2,0.83,1,0.42,1,0.42,240
+Western Europe & North America,2010s,2,0.84,2,0.84,6,2.52,238
+Western Europe & North America,2020s,0,,0,,0,,0

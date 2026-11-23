@@ -1,0 +1,2 @@
+spells_all,recovered_all,spells_with_trend,declining,rising,rec_declining,rec_rising,p_fisher_one_sided,power_0.30_vs_0.20,power_0.40_vs_0.15,power_0.50_vs_0.15,power_0.60_vs_0.10
+53,12,34,20,14,3,4,0.9174900215926193,0.07325,0.30725,0.55425,0.87825
