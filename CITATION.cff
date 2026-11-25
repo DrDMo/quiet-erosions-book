@@ -13,4 +13,7 @@ references:
     authors:
       - family-names: Molnar
         given-names: Darin
-    notes: "Forthcoming. Update with publisher, year, and ISBN on publication."
+    publisher:
+      name: "Shoreline Publishing Group"
+    year: 2026
+    isbn: "979-8-1450-4982-4"

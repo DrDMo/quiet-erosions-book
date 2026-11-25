@@ -1,72 +1,74 @@
-# Quiet Erosions
+# Quiet Erosions: Replication Archive
 
-Public code archive for the book **_Quiet Erosions: Authoritarian Demand and the Institutional Pathways of Democratic Backsliding_** by Darin Molnar.
+Code and output tables for **_Quiet Erosions: Authoritarian Demand and the Institutional Pathways of Democratic Backsliding_** (Darin R. Molnar, Shoreline Publishing Group, 2026; Volume 2 of the Shoreline Publishing Group Comparative Politics Series).
 
-## Purpose
-
-This repository holds the code, analysis scripts, and replication material that support the empirical claims and figures in the book. It is intended as an open record so that readers, reviewers, and future researchers can:
-
-- Inspect the data preparation steps behind every chart and statistic in the book.
-- Re-run the analyses against the cited datasets.
-- Extend or critique the methods on their own.
+Every estimate in the book is produced by a script in `scripts/`. The tables they write are in `results/tables/`, and the figures are in `figures/`. Raw data are not redistributed: obtain them from the originating archives as described below.
 
 ## Repository layout
 
-```
+```text
 .
-├── Data/                        # Raw and intermediate datasets (most contents git-ignored)
-├── notebooks/                   # Per-chapter analysis notebooks (.ipynb)
-├── scripts/                     # One-shot data ingest / cleaning scripts
-├── figures/                     # Rendered figure outputs (PNG/PDF/SVG)
-├── src/quiet_erosions/          # Importable Python package: shared utilities
-├── tests/                       # Pytest suite for shared utilities
-├── pyproject.toml               # Project metadata + dependency groups
-├── CITATION.cff                 # Machine-readable citation metadata
-├── README.md
-├── LICENSE
-└── .gitignore
+├── scripts/                  # Analysis scripts, run in numerical order (see scripts/README.md)
+├── src/quiet_erosions/       # Shared code: the quiet-erosion rule (erosion.py), paths, plot style
+├── results/tables/           # Output tables (CSV), named by chapter
+├── figures/                  # Book figures (PNG and PDF), named by chapter
+├── tests/                    # Pytest checks for shared code
+├── Data/                     # Local data folder (git-ignored)
+├── pyproject.toml
+├── CITATION.cff
+└── LICENSE
 ```
 
-## Data
+## Data sources
 
-Most primary datasets used in the book are third-party and are not redistributed here. Where redistribution is permitted, files will live under `Data/`. Where it is not, the relevant scripts will document how to obtain the source data directly from its publisher.
+Point the `QE_DATA_ROOT` environment variable at a local folder with this layout (without it, `Data/` in this repository is used):
 
-## Setup
+| Path under `$QE_DATA_ROOT` | Source | Used by |
+|---|---|---|
+| `raw/unz/V-Dem-CY-Full+Others-v14.csv` | V-Dem Country-Year dataset v14 | `01_build_panel.py` |
+| `raw/vdem_ert/ert.csv` | V-Dem Episodes of Regime Transformation (ERT) v16 | `01_build_panel.py` |
+| `raw/wvs_trend/wvs_trend_full.parquet` | WVS Integrated Trend File v4.1, converted from SPSS | `03_build_individual.py` |
+| `raw/evs_trend/evs_trend_full.parquet` | EVS Trend File v3.0.0 (ZA7503), converted from SPSS | `03_build_individual.py` |
+| `processed/agp_country_wave.parquet` | Volume 1 country-wave AGP scores | `04_link_agp.py`, `09_escalation_reversal.py` |
+| `processed/country_iso3_xwalk.parquet` | Volume 1 country crosswalk | `04`, `05`, `09`, `10` |
+
+Download locations, versions, and citations for the four raw files are in the Volume 1 archive's [data sources documentation](https://github.com/DrDMo/demanding-strongmen-book/blob/main/docs/data_sources.md). The two survey files are converted to Parquet by Volume 1's `code/00_convert_spss.py`. The two Volume 1 files are produced by its `code/04_agp_scores.py` (AGP scores) and `code/07_ch6_hazard_models.py` (crosswalk). `04_link_agp.py` adds the ten EVS-only countries missing from the Volume 1 crosswalk (Chapter 3, Section 3.8.2).
+
+## Reproducing the analyses
 
 Requires Python 3.11 or newer.
 
 ```bash
-# Clone
 git clone https://github.com/DrDMo/quiet-erosions-book.git
 cd quiet-erosions-book
-
-# Create a virtual environment and install in editable mode with all extras
 python -m venv .venv
-# Windows:  .venv\Scripts\activate
-# macOS/Linux:  source .venv/bin/activate
-pip install -e ".[analysis,notebook,dev]"
+# Windows:  .venv\Scripts\activate    macOS/Linux:  source .venv/bin/activate
+pip install -e ".[analysis]"
 ```
 
-Then verify:
+Then run the scripts in order from the repository root:
 
-```bash
-pytest -q
-```
+| Script | Chapter | Writes |
+|---|---|---|
+| `01_build_panel.py` | all | Country-year panel, 1990–2023 (V-Dem v14 and ERT v16) |
+| `02_ch4_quiet_erosion.py` | 4 | Quiet-erosion spells, incidence, the 81-combination sensitivity grid with the original rule (`ch4_sensitivity.csv`), Chapter 4 figures |
+| `03_build_individual.py` | 5 | Respondent file with the confidence and essential-characteristics items |
+| `04_link_agp.py` | 6–8 | AGP linked to the panel; link and hazard coverage tables |
+| `05_ch5_targeting.py` | 5 | Institutional targeting (QE1), Figures 5.1–5.3 |
+| `06_pathways.py` | 6–8 | Change and hazard models by pathway, Figures 6.1, 7.1, 8.1 |
+| `07_sequence.py` | 8 | Order of pathway onsets (QE4) |
+| `07b_vertical_components.py` | 8 | Components of the vertical-first spells |
+| `08_conversion.py` | 9 | Mediation and moderation (QE5) |
+| `08b_high_demand.py` | 9 | High-demand at-risk country-waves (Section 9.6) |
+| `09_escalation_reversal.py` | 10 | Escalation (QE6) and reversal (QE7) |
+| `10_robustness.py` | 11 | Robustness checks, Figure 11.1 |
 
-## Reproducing the analyses
-
-Each chapter's analyses live in `notebooks/` (and any one-shot data preparation in `scripts/`). Reproduction instructions specific to a chapter will be documented alongside its notebook as those land.
+`scripts/README.md` describes the data steps in more detail. The quiet-erosion rule, including Amendment 1, is documented in the docstring of `src/quiet_erosions/erosion.py`.
 
 ## License
 
-Code in this repository is released under the MIT License — see [LICENSE](LICENSE).
-
-The book's prose, figures, and other narrative content are **not** covered by this license; all rights to the book text are reserved by the author.
+Code is released under the MIT License (see [LICENSE](LICENSE)). The book's text and figures are not covered by this license; all rights to the book are reserved by the author. Data remain subject to the terms of their originating archives.
 
 ## Citation
 
-If you use code from this repository in academic work, please cite the book. A formal citation entry will be added when the book is published.
-
-## Contact
-
-Issues and pull requests are welcome via GitHub.
+Molnar, D. R. (2026). *Quiet Erosions: Authoritarian Demand and the Institutional Pathways of Democratic Backsliding*. Shoreline Publishing Group. See also [CITATION.cff](CITATION.cff).
